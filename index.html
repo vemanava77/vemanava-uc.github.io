@@ -73,7 +73,10 @@
         .card {
             border: none;
             box-shadow: 0 2px 4px rgba(0, 0, 1, 0.4);
+            background-color: #d0e4e8
         }
+    
+
         .card-title {
             color: #007bff; 
         }
@@ -144,10 +147,12 @@
         </header>
 
         <section class="container py-5" id="about">
-            <h2>About Me</h2>
-            <p>As an enthusiastic web developer,passionate about building user-friendly websites and applications.
-                Skilled in HTML, CSS, JavaScript, and modern frameworks,continuously learning new technologies.
-            </p>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">About Me</h2>
+                    <p class="card-text">As an enthusiastic web developer, passionate about building user-friendly websites and applications. Skilled in HTML, CSS, JavaScript, and modern frameworks, continuously learning new technologies.</p>
+                </div>
+            </div>
         </section>
         <section class="container py-5" id="Education">
             <div class="row">
@@ -194,56 +199,51 @@
                 <div class="row">
                     <div class="col-md">
                         <h3>Skills</h3>
-                        <div class="mb-4">
-                            <div class="">
-
-                            </div>
-
                         </div>
+                        <div class="container">
+    
+                            <div class="row">
+                              
+                              <div class="col-md-6">
+                                <h3>Frontend</h3>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar" role="progressbar" style="width: 90%;"
+                                   aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
+                                </div>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar" role="progressbar" style="width: 85%;" 
+                                  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
+                                </div>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar" role="progressbar" style="width: 75%;" 
+                                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">JavaScript</div>
+                                </div>
+                                
+                              </div>
+                          
+                              
+                              <div class="col-md-6">
+                                <h3>Backend</h3>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar" role="progressbar" style="width: 85%;" 
+                                  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Python</div>
+                                </div>
+                                
+                                <div class="progress mb-3">
+                                  <div class="progress-bar" role="progressbar" style="width: 70%;"
+                                   aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Node.js</div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
 
                     </div>
 
                 </div>
-            </div>
-            
+            </div> 
         </section>
-        <div class="container">
-    
-            <div class="row">
-              
-              <div class="col-md-6">
-                <h3>Frontend</h3>
-                <div class="progress mb-3">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;"
-                   aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
-                </div>
-                <div class="progress mb-3">
-                  <div class="progress-bar" role="progressbar" style="width: 85%;" 
-                  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
-                </div>
-                <div class="progress mb-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" 
-                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">JavaScript</div>
-                </div>
-                
-              </div>
-          
-              
-              <div class="col-md-6">
-                <h3>Backend</h3>
-                <div class="progress mb-3">
-                  <div class="progress-bar" role="progressbar" style="width: 85%;" 
-                  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Python</div>
-                </div>
-                
-                <div class="progress mb-3">
-                  <div class="progress-bar" role="progressbar" style="width: 70%;"
-                   aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Node.js</div>
-                </div>
-                
-              </div>
-            </div>
-          </div>
+        
           
 
         <footer class="container py-5" id="contact">
