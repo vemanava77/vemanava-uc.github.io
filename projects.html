@@ -10,68 +10,108 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
      crossorigin="anonymous"></script>
-
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f0f2f5; /* Light grey background for a subtle, modern look */
         }
-        .header-container {
-            background-color: #007bff;
-            color: #fff;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            text-align: center;
+        .container, .accordion-item {
+            background-color: #ffffff; /* White background for content areas */
+            border-radius: 8px; /* Rounded corners for a softer look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            margin-bottom: 20px; /* Space between content areas */
         }
-        .btn-enroll {
-            background-color: #28a745;
-            border-color: #28a745;
-            margin-top: 20px;
+        h2 {
+            color: #007bff; /* Bootstrap primary blue for headings */
+            font-weight: bold;
+            margin-bottom: 20px; /* Space below the heading */
         }
-        .btn-enroll:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
-        }
-        .course-highlight {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,.1);
-            margin-bottom: 20px;
+        .accordion-button:not(.collapsed) {
+            color: #007bff; /* Change the color of the button when expanded */
+            background-color: #e7f1ff; /* Light blue background for expanded button */
         }
     </style>
 </head>
 <body>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-          </div>
-        </div>
-      </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <div class="my-5 p-4">
+      <h2>Web Application Programming and Hacking Course</h2>
     
+    <div class="container my-5 p-3">
+        
+        <p>This course offers a comprehensive look into Web Application Programming and Hacking, covering essential security techniques and web development skills. Participants will learn through a combination of theoretical concepts and hands-on projects, gaining the ability to develop secure web applications and understand the underlying threats and countermeasures.</p>
+    </div>
+
+
+    <h3 class="mx-3">Hands-on Projects</h3>
+    <div class="accordion accordion-flush my-5 p-4" id="accordionFlushExample">
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingProjects">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProject1" aria-expanded="false" aria-controls="flush-collapseProjects">
+                    Project -1
+                </button>
+            </h2>
+            <div id="flush-collapseProject1" class="accordion-collapse collapse" aria-labelledby="flush-headingProjects" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><strong>Project 1: Secure Web Application Development</strong></p>
+                    <p>Develop a web application with a focus on security, implementing authentication, secure communication, and protection against common vulnerabilities.</p>
+                    
+                    <p><strong>Project 2: Ethical Hacking Simulation</strong></p>
+                    <p>Conduct a simulated ethical hacking exercise on a web application, identifying vulnerabilities and proposing mitigation strategies.</p>
+
+                    <p><strong>Project 3: Database Security Implementation</strong></p>
+                    <p>Design and secure a database system used within a web application, applying encryption, access control, and SQL injection prevention techniques.</p>
+
+                    <p><strong>Project 4: Secure API Development</strong></p>
+                    <p>Build a secure RESTful API that implements OAuth for authentication, rate limiting for DoS prevention, and data validation to ensure secure data exchange.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingProjects">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProject2" aria-expanded="false" aria-controls="flush-collapseProjects">
+                  Project -2
+              </button>
+          </h2>
+          <div id="flush-collapseProject2" class="accordion-collapse collapse" aria-labelledby="flush-headingProjects" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <p><strong>Project 1: Secure Web Application Development</strong></p>
+                  <p>Develop a web application with a focus on security, implementing authentication, secure communication, and protection against common vulnerabilities.</p>
+                  
+                  <p><strong>Project 2: Ethical Hacking Simulation</strong></p>
+                  <p>Conduct a simulated ethical hacking exercise on a web application, identifying vulnerabilities and proposing mitigation strategies.</p>
+
+                  <p><strong>Project 3: Database Security Implementation</strong></p>
+                  <p>Design and secure a database system used within a web application, applying encryption, access control, and SQL injection prevention techniques.</p>
+
+                  <p><strong>Project 4: Secure API Development</strong></p>
+                  <p>Build a secure RESTful API that implements OAuth for authentication, rate limiting for DoS prevention, and data validation to ensure secure data exchange.</p>
+              </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingProjects">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProject3" aria-expanded="false" aria-controls="flush-collapseProjects">
+                Project -3
+            </button>
+        </h2>
+        <div id="flush-collapseProject3" class="accordion-collapse collapse" aria-labelledby="flush-headingProjects" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <p><strong>Project 1: Secure Web Application Development</strong></p>
+                <p>Develop a web application with a focus on security, implementing authentication, secure communication, and protection against common vulnerabilities.</p>
+                
+                <p><strong>Project 2: Ethical Hacking Simulation</strong></p>
+                <p>Conduct a simulated ethical hacking exercise on a web application, identifying vulnerabilities and proposing mitigation strategies.</p>
+
+                <p><strong>Project 3: Database Security Implementation</strong></p>
+                <p>Design and secure a database system used within a web application, applying encryption, access control, and SQL injection prevention techniques.</p>
+
+                <p><strong>Project 4: Secure API Development</strong></p>
+                <p>Build a secure RESTful API that implements OAuth for authentication, rate limiting for DoS prevention, and data validation to ensure secure data exchange.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
