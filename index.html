@@ -260,13 +260,79 @@
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
         </footer>
+        <div class="container mt-5">
+            <h2 class="mb-4">Current Weather in <span id="city-name"></span></h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="weather-description"></h5>
+                    <p class="card-text">Temperature: <span id="temp"></span>°C</p>
+                    <p class="card-text">Apparent Temperature: <span id="app-temp"></span>°C</p>
+                    <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                    <p class="card-text">Wind Speed: <span id="wind-spd">6.17</span> km/h <span id="wind-cdir-full"></span></p>
+                    <p class="card-text">Air Quality Index: <span id="aqi">45</span></p>
+                    <p class="card-text">Sunrise: <span id="sunrise"></span> AM, Sunset: <span id="sunset"></span> PM</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const apiKey = '0b7d28cd024d45929b4bd50e995a806e'; // Replace with your actual API key
+            
+            function fetchWeatherData(lat, lon) {
+                const url = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&include=minutely`;
+            
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        const weather = data.data[0];
+                        document.getElementById('city-name').textContent = weather.city_name;
+                        document.getElementById('weather-description').textContent = weather.weather.description;
+                        document.getElementById('temp').textContent = weather.temp;
+                        document.getElementById('app-temp').textContent = weather.app_temp;
+                        document.getElementById('humidity').textContent = weather.rh;
+                        document.getElementById('wind-spd').textContent = weather.wind_spd;
+                        document.getElementById('wind-cdir-full').textContent = `(${weather.wind_cdir_full})`;
+                        document.getElementById('aqi').textContent = weather.aqi;
+                        document.getElementById('sunrise').textContent = weather.sunrise;
+                        document.getElementById('sunset').textContent = weather.sunset;
+                    })
+                    .catch(error => console.error('Error fetching weather data:', error));
+            }
+            
+            function getLocationAndWeather() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(position => {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        console.log(lat,lon)
+                        fetchWeatherData(lat, lon);
+                    }, () => {
+                        console.error('Geolocation is supported, but the user denied the request.');
+                        // Handle the case where the user denies location access or an error occurs
+                        // This could involve fetching weather for a default location or displaying a message to the user
+                    });
+                } else {
+                    console.error('Geolocation is not supported by this browser.');
+                    // Handle the case where Geolocation is not supported by the browser
+                    // This could involve fetching weather for a default location
+                }
+            }
+            
+            // Get location and fetch weather data when the page loads
+            getLocationAndWeather();
+            
+            // Consider if you need to update weather data based on the user's movement. 
+            // If static, a single fetch might suffice. For dynamic updates, ensure respectful use of geolocation and API calls.
+            </script>
+            
+        
+        
 
         <!-- Flag Counter -->
         <a href="https://info.flagcounter.com/G-HZ5E8FJVKZ">
         <img src="https://s11.flagcounter.com/count/G-HZ5E8FJVKZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_20/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
              alt="Flag Counter" border="0">
             </a>
-    
+        
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
