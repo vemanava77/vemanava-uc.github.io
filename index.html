@@ -56,7 +56,6 @@
         #forecast-container .forecast-output img {
                 margin: 0 auto; /* Centers the weather icon */
             }
-
             #detailedForecast .hourly-item {
                 display: flex;
                 flex-direction: column;
@@ -170,7 +169,7 @@
             let lastVisit = getCookie("lastvisit");
             let message = document.getElementById('last-visit');
             if (lastVisit !== "") {
-                message.className += "alert-info";
+                message.className += " alert-info";
                 message.innerHTML = `Welcome back! Your last visit was on ${lastVisit}.`;
             } else {
                 message.className += " alert-success";
