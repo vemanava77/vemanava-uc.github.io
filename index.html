@@ -347,9 +347,8 @@
         };
     </script>
     <!-- React code for email toggle  -->
-    <section>
-        <div id="email"></div>
-        <script type="text/babel">
+    <div id="email"></div>
+    <script type="text/babel">
             function EmailToggle() {
                 const [shown, setShown] = React.useState(false);
                 return (
@@ -363,8 +362,8 @@
                 );
             }
             ReactDOM.render(<EmailToggle />, document.getElementById('email'));
-        </script>
-    </section>
+    </script>
+    
     <!-- Jquery for analog and digital Clock -->
     <section>
         <div class="container my-5">
