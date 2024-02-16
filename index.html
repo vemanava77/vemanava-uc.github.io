@@ -105,18 +105,20 @@
             </div>
     </div>
     </header>
-
+    <!-- Cookie and Message-->
     <div class="container py-3">
         <div id="last-visit" class="alert" role="alert">
         </div>
     </div>
+    <!-- Cookie-->
     <script>
         // Function to set a cookie
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            let expires = "expires=" + d.toUTCString();
+            let expires = "expires=" + d.toUTCString(); 
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            
         }
 
         // Function to get a cookie
@@ -140,25 +142,20 @@
             let lastVisit = getCookie("lastvisit");
             let message = document.getElementById('last-visit');
             if (lastVisit !== "") {
-                message.className += " alert-info";
+                message.className += "alert-info";
                 message.innerHTML = `Welcome back! Your last visit was on ${lastVisit}.`;
-                console.log("welcome back")
             } else {
                 message.className += " alert-success";
                 message.innerHTML = "Welcome to my homepage!";
-                console.log("hi")
             }
             setCookie("lastvisit", new Date().toLocaleString(), 365);
         }
-
-        
     </script>
 
     <section class="container py-5" id="about">
         <h3>About Me</h3>
         <div class="card">
             <div class="card-body">
-
                 <p class="card-text">As an enthusiastic web developer, passionate about building user-friendly websites
                     and
                     applications. Skilled in HTML, CSS, JavaScript, and its frameworks like react and always interested
@@ -169,7 +166,7 @@
     </section>
     <section class="container py-5" id="Education">
                 <h3>Education</h3>
-                <div class="card    ">
+                <div class="card ">
                     <div class="card-body">
                         <h4 class="card-title"> Masters of Science in Information Technology - University of Cincinnati
                         </h4>
@@ -198,8 +195,6 @@
         <div class="row">
             <div class="col-md-6">
                 <h2><a href="projects.html" target="_blank">Course Work and Projects </a></h2>
-
-
             </div>
         </div>
     </section>
@@ -252,12 +247,8 @@
         </div>
         </div>
     </section>
-
-
-
     <footer class="container py-5" id="contact">
         <h2>Contact Me</h2>
-
         <form>
             <div class="form-group">
                 <label for="nameInput">Name</label>
@@ -346,7 +337,6 @@
                     document.getElementById('jokeDelivery').innerText = '';
                     return;
                 }
-
                 document.getElementById('jokeSetup').innerText = data.setup || '';
 
                 if (data.delivery) {
