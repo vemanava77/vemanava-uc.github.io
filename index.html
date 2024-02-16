@@ -11,8 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
      crossorigin="anonymous"></script>
-     
-      
+
+     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+     <!-- Babel for JSX parsing -->
+     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
         <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ5E8FJVKZ"></script>
             <script>
@@ -48,9 +53,6 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </head>
 
@@ -158,7 +160,9 @@
             <div class="card">
                 <div class="card-body">
                     
-                    <p class="card-text">As an enthusiastic web developer, passionate about building user-friendly websites and applications. Skilled in HTML, CSS, JavaScript, and modern frameworks, continuously learning new technologies.</p>
+                    <p class="card-text">As an enthusiastic web developer, passionate about building user-friendly websites and
+                         applications. Skilled in HTML, CSS, JavaScript, and its frameworks like react and always interested in
+                         continuously learning new technologies.</p>
                 </div>
             </div>
         </section>
@@ -282,8 +286,8 @@
                     <p class="card-text">Temperature: <span id="temp"></span>°C</p>
                     <p class="card-text">Apparent Temperature: <span id="app-temp"></span>°C</p>
                     <p class="card-text">Humidity: <span id="humidity"></span>%</p>
-                    <p class="card-text">Wind Speed: <span id="wind-spd">6.17</span> km/h <span id="wind-cdir-full"></span></p>
-                    <p class="card-text">Air Quality Index: <span id="aqi">45</span></p>
+                    <p class="card-text">Wind Speed: <span id="wind-spd"></span> km/h <span id="wind-cdir-full"></span></p>
+                    <p class="card-text">Air Quality Index: <span id="aqi"></span></p>
                     <p class="card-text">Sunrise: <span id="sunrise"></span> AM, Sunset: <span id="sunset"></span> PM</p>
                 </div>
             </div>
@@ -385,19 +389,82 @@
   
         };
     </script>
-        
+        <div id="email"></div>
+        <script type="text/babel">
+            function EmailToggle() {
+              const [shown, setShown] = React.useState(false);
+            
+              function toggleEmail() {
+                setShown(!shown);
+              }
+            
+              return (
+                <div className="container mt-3">
+                  <button onClick={toggleEmail} className="btn btn-primary">
+                    {shown ? 'Hide my email' : 'Show my email'}
+                  </button>
+                  {shown && <p className="mt-2"><a href="mailto:vemanava@mail.uc.edu" className="link-primary">vemanava@mail.uc.edu</a></p>}
+                </div>
+              );
+            }
+            
+            ReactDOM.render(<EmailToggle />, document.getElementById('email'));
+            </script>
+
+            <div class="container my-5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Analog Clock</h5>
+                        <canvas id="analog-clock" width="150" height="150" style="background-color:#999;"></canvas>
+                    </div>
+                </div>
+                <div id="digital-clock" class="text-center mt-3"></div>
+            </div>
+            <script src="https://waph-uc.github.io/clock.js"></script>
+            <script>
+                $(document).ready(function() {
+                var canvas = $('#analog-clock')[0];
+                var ctx = canvas.getContext("2d");
+                var radius = canvas.height / 2;
+                ctx.translate(radius, radius);
+                radius *= 0.90;
+                setInterval(drawClock, 1000);
+
+                function drawClock() {
+                drawFace(ctx, radius);
+                drawNumbers(ctx, radius);
+                drawTime(ctx, radius);
+                }
+
+                function displayTime() {
+                $('#digital-clock').text("Current time: " + new Date().toLocaleTimeString());
+                }
+                setInterval(displayTime, 500);
+            });
+              </script>
+
+            <div id="time"></div>
+
+            <script type="text/babel">
+                // React component
+                function DateTimeDisplay() {
+                    const [date, setDate] = React.useState('');
+                    return (
+                        <div id="date-time" className="text-center mt-5">
+                            <div id="date" className="btn btn-primary" onClick={() => setDate(new Date().toString())}>
+                                {date || "Click here to show date"}
+                            </div>
+                        </div>
+                    );
+                }
+                ReactDOM.render(<DateTimeDisplay />, document.getElementById('time'));
+            </script>
+
         
 
-        <!-- Flag Counter -->
-        <a href="https://info.flagcounter.com/G-HZ5E8FJVKZ">
-        <img src="https://s11.flagcounter.com/count/G-HZ5E8FJVKZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_20/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
-             alt="Flag Counter" border="0">
-            </a>
-        
+   
 
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
     </div>
 </body>
 </html>
