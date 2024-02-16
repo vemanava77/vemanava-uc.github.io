@@ -28,6 +28,7 @@
 
         gtag('config', 'G-HZ5E8FJVKZ');
     </script>
+    <!-- custom styles  -->
     <style>
         body {
             background-color: #e5f0f2;
@@ -52,6 +53,29 @@
             justify-content: space-around;
             width: 100%;
         }
+        #forecast-container .forecast-output img {
+                margin: 0 auto; /* Centers the weather icon */
+            }
+
+            #detailedForecast .hourly-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            #hdetailedForecast .hourly-item span {
+                margin-top: 5px;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                #hourly-forecast {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
     </style>
     <!-- Poper JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -60,6 +84,7 @@
 </head>
 
 <body>
+        <!-- sticky nav bar    -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Vemana</a>
@@ -88,7 +113,8 @@
                 </div>
             </div>
         </nav>
-        <header class="container py-5">
+        <!-- Details Section  -->
+        <section class="container py-5">
             <div class="row align-items-center">
                 <div class="col-12 col-md-4">
                     <img src="images/dispaly_pic.jpeg" alt="Headshot" class="img-fluid rounded-circle">
@@ -104,8 +130,10 @@
                 </div>
             </div>
     </div>
-    </header>
-    <!-- Cookie and Message-->
+        </section>
+    <!-- cookie Msg  -->
+    <section>   
+        <!-- Cookie and Message-->
     <div class="container py-3">
         <div id="last-visit" class="alert" role="alert">
         </div>
@@ -152,6 +180,8 @@
         }
     </script>
 
+    </section>
+    <!-- About Section -->
     <section class="container py-5" id="about">
         <h3>About Me</h3>
         <div class="card">
@@ -164,6 +194,7 @@
             </div>
         </div>
     </section>
+    <!-- Education Section  -->
     <section class="container py-5" id="Education">
                 <h3>Education</h3>
                 <div class="card ">
@@ -178,6 +209,7 @@
                     </div>
         </div>
     </section>
+    <!-- Experince Section  -->
     <section class="container py-5" id="Experience">
         <div class="row">
             <div class="col-md">
@@ -191,6 +223,7 @@
             </div>
         </div>
     </section>
+    <!-- Link to course Overvire Page -->
     <section class="container py-5" id="projects">
         <div class="row">
             <div class="col-md-6">
@@ -198,6 +231,7 @@
             </div>
         </div>
     </section>
+    <!-- Skills Section  -->
     <section>
         <div class="container">
             <div class="row">
@@ -205,9 +239,7 @@
                     <h3>Skills</h3>
                 </div>
                 <div class="container">
-
                     <div class="row">
-
                         <div class="col-md-6">
                             <h3>Frontend</h3>
                             <div class="progress mb-3">
@@ -222,7 +254,6 @@
                                 <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
                                     aria-valuemin="0" aria-valuemax="100">JavaScript</div>
                             </div>
-
                         </div>
 
 
@@ -247,6 +278,7 @@
         </div>
         </div>
     </section>
+    <!-- Contact Form  -->
     <footer class="container py-5" id="contact">
         <h2>Contact Me</h2>
         <form>
@@ -266,96 +298,7 @@
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </footer>
-    <div class="container mt-5">
-        <h2 class="mb-4">Current Weather in <span id="city-name"></span></h2>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title" id="weather-description"></h5>
-                <p class="card-text">Temperature: <span id="temp"></span>°C</p>
-                <p class="card-text">Apparent Temperature: <span id="app-temp"></span>°C</p>
-                <p class="card-text">Humidity: <span id="humidity"></span>%</p>
-                <p class="card-text">Wind Speed: <span id="wind-spd"></span> km/h <span id="wind-cdir-full"></span></p>
-                <p class="card-text">Air Quality Index: <span id="aqi"></span></p>
-                <p class="card-text">Sunrise: <span id="sunrise"></span> AM, Sunset: <span id="sunset"></span> PM</p>
-            </div>
-        </div>
-    </div>
-    <script>
-        const apiKey = '0b7d28cd024d45929b4bd50e995a806e';
-
-        async function fetchWeatherData(lat, lon) {
-            try {
-                const url = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&include=minutely`;
-                const response = await fetch(url);
-                const data = await response.json();
-                const weather = data.data[0];
-                document.getElementById('city-name').textContent = weather.city_name;
-                document.getElementById('weather-description').textContent = weather.weather.description;
-                document.getElementById('temp').textContent = weather.temp;
-                document.getElementById('app-temp').textContent = weather.app_temp;
-                document.getElementById('humidity').textContent = weather.rh;
-                document.getElementById('wind-spd').textContent = weather.wind_spd;
-                document.getElementById('wind-cdir-full').textContent = `(${weather.wind_cdir_full})`;
-                document.getElementById('aqi').textContent = weather.aqi;
-                document.getElementById('sunrise').textContent = weather.sunrise;
-                document.getElementById('sunset').textContent = weather.sunset;
-            } catch (error) {
-                console.error('Error fetching weather data:', error);
-            }
-        }
-
-        function getLocationAndWeather() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(async (position) => {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
-                    console.log(lat, lon);
-                    await fetchWeatherData(lat, lon);
-                }, () => {
-                    console.error('Geolocation is supported, but the user denied the request.');
-                });
-            } else {
-                console.error('Geolocation is not supported by this browser.');
-            }
-        }
-
-        getLocationAndWeather();
-
-
-
-    </script>
-    <script>
-        async function fetchJoke() {
-            try {
-                const response = await fetch('https://v2.jokeapi.dev/joke/Any');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                if (data.error) {
-                    document.getElementById('jokeSetup').innerText = 'Error fetching joke';
-                    document.getElementById('jokeDelivery').innerText = '';
-                    return;
-                }
-                document.getElementById('jokeSetup').innerText = data.setup || '';
-
-                if (data.delivery) {
-                    document.getElementById('jokeDelivery').innerText = data.delivery;
-                } else {
-                    document.getElementById('jokeDelivery').innerText = '';
-                }
-            } catch (error) {
-                console.error('Error fetching joke:', error);
-                document.getElementById('jokeSetup').innerText = 'Failed to load joke';
-                document.getElementById('jokeDelivery').innerText = '';
-            }
-        }
-
-        setInterval(fetchJoke, 60000);
-
-        // Initial call to load a joke when the page loads
-        fetchJoke();
-    </script>
+    <!-- Joke APi -->
     <section class="container py-5" id="jokes">
         <h3>Funny Moment</h3>
         <div class="card">
@@ -364,85 +307,228 @@
                 <p class="card-text" id="jokeDelivery"></p>
             </div>
         </div>
+        <script>
+            async function fetchJoke() {
+                try {
+                    const response = await fetch('https://v2.jokeapi.dev/joke/Any');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    if (data.error) {
+                        document.getElementById('jokeSetup').innerText = 'Error fetching joke';
+                        document.getElementById('jokeDelivery').innerText = '';
+                        return;
+                    }
+                    document.getElementById('jokeSetup').innerText = data.setup || '';
+    
+                    if (data.delivery) {
+                        document.getElementById('jokeDelivery').innerText = data.delivery;
+                    } else {
+                        document.getElementById('jokeDelivery').innerText = '';
+                    }
+                } catch (error) {
+                    console.error('Error fetching joke:', error);
+                    document.getElementById('jokeSetup').innerText = 'Failed to load joke';
+                    document.getElementById('jokeDelivery').innerText = '';
+                }
+            }
+    
+            setInterval(fetchJoke, 60000);
+    
+            // Initial call to load a joke when the page loads
+            fetchJoke();
+        </script>
     </section>
+    <!-- On load Functions -->
     <script>
-
         window.onload = function () {
             checkCookie();
             fetchJoke();
-
         };
     </script>
-    <div id="email"></div>
-    <script type="text/babel">
-        function EmailToggle() {
-            const [shown, setShown] = React.useState(false);
-
-            function toggleEmail() {
-                setShown(!shown);
+    <!-- React code for email toggle  -->
+    <section>
+        <div id="email"></div>
+        <script type="text/babel">
+            function EmailToggle() {
+                const [shown, setShown] = React.useState(false);
+                return (
+                    <div className="container mt-3">
+                        <button onClick={toggleEmail} className="btn btn-primary">
+                            {shown ? 'Hide my email' : 'Show my email'}
+                        </button>
+                        {shown && <p className="mt-2"><a href="mailto:vemanava@mail.uc.edu" 
+                            className="link-primary">vemanava@mail.uc.edu</a></p>}
+                    </div>
+                );
             }
-
-            return (
-                <div className="container mt-3">
-                    <button onClick={toggleEmail} className="btn btn-primary">
-                        {shown ? 'Hide my email' : 'Show my email'}
-                    </button>
-                    {shown && <p className="mt-2"><a href="mailto:vemanava@mail.uc.edu" className="link-primary">vemanava@mail.uc.edu</a></p>}
+            ReactDOM.render(<EmailToggle />, document.getElementById('email'));
+        </script>
+    </section>
+    <!-- Jquery for analog and digital Clock -->
+    <section>
+        <div class="container my-5">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Analog Clock</h5>
+                    <canvas id="analog-clock" width="150" height="150" style="background-color:#999;"></canvas>
                 </div>
-            );
-        }
-
-        ReactDOM.render(<EmailToggle />, document.getElementById('email'));
-    </script>
-
-    <div class="container my-5">
-        <div class="card">
-            <div class="card-body text-center">
-                <h5 class="card-title">Analog Clock</h5>
-                <canvas id="analog-clock" width="150" height="150" style="background-color:#999;"></canvas>
             </div>
+            <div id="digital-clock" class="text-center mt-3"></div>
         </div>
-        <div id="digital-clock" class="text-center mt-3"></div>
-    </div>
-    <script src="https://waph-uc.github.io/clock.js"></script>
-    <script>
-        $(document).ready(function () {
-            var canvas = $('#analog-clock')[0];
-            var ctx = canvas.getContext("2d");
-            var radius = canvas.height / 2;
-            ctx.translate(radius, radius);
-            radius *= 0.90;
-            setInterval(drawClock, 1000);
-
-            function drawClock() {
-                drawFace(ctx, radius);
-                drawNumbers(ctx, radius);
-                drawTime(ctx, radius);
+        <script src="https://waph-uc.github.io/clock.js"></script>
+        <script>
+            $(document).ready(function () {
+                var canvas = $('#analog-clock')[0];
+                var ctx = canvas.getContext("2d");
+                var radius = canvas.height / 2;
+                ctx.translate(radius, radius);
+                radius *= 0.90;
+                setInterval(drawClock, 1000);
+    
+                function drawClock() {
+                    drawFace(ctx, radius);
+                    drawNumbers(ctx, radius);
+                    drawTime(ctx, radius);
+                }
+    
+                function displayTime() {
+                    $('#digital-clock').text("Current time: " + new Date().toLocaleTimeString());
+                }
+                setInterval(displayTime, 500);
+            });
+        </script>
+    </section>
+    <!-- Uisng  React- Date and Time -->
+    <section>
+        <div id="time"></div>
+        <script type="text/babel">
+            // React component
+            function DateTimeDisplay() {
+                const [date, setDate] = React.useState('');
+                return (
+                    <div id="date-time" className="text-center mt-5">
+                        <div id="date" className="btn btn-primary" onClick={() => setDate(new Date().toString())}>
+                            {date || "Click here to show date"}
+                        </div>
+                    </div>
+                );
             }
-
-            function displayTime() {
-                $('#digital-clock').text("Current time: " + new Date().toLocaleTimeString());
-            }
-            setInterval(displayTime, 500);
-        });
-    </script>
-
-    <div id="time"></div>
-
-    <script type="text/babel">
-        // React component
-        function DateTimeDisplay() {
-            const [date, setDate] = React.useState('');
-            return (
-                <div id="date-time" className="text-center mt-5">
-                    <div id="date" className="btn btn-primary" onClick={() => setDate(new Date().toString())}>
-                        {date || "Click here to show date"}
+            ReactDOM.render(<DateTimeDisplay />, document.getElementById('time'));
+        </script>
+    </section>
+    <!-- Weather App -->
+    <section>
+        <div id="forecast-container" class="container my-5">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Weather Dashboard</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" id="cityInput" class="form-control" placeholder="Enter city" aria-label="City name" aria-describedby="searchButton">
+                        <button class="btn btn-outline-primary" type="button" id="searchButton" onclick="fetchWeatherData()">Search</button>
+                    </div>
+                    <div class="forecast-output mt-4">
+                        <img id="forecastIcon" class="img-fluid mb-2" style="width: 200px; height: auto;">
+                        <div id="temperatureInfo" class="h3"></div>
+                        <div id="conditionSummary" class="h5"></div>
+                        <div id="detailedForecast" class="d-flex flex-row justify-content-between flex-wrap"></div>
                     </div>
                 </div>
-            );
-        }
-        ReactDOM.render(<DateTimeDisplay />, document.getElementById('time'));
-    </script>
+            </div>
+        </div>
+        <script>
+            async function fetchWeatherData() {
+                const weatherApiKey = '0bc02c6fea908524f87b25cdd791b2b6';
+                const cityName = document.getElementById('cityInput').value;
+    
+                if (!cityName) {
+                    alert('Please enter a city name');
+                    return;
+                }
+    
+                const apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}`;
+                const apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${weatherApiKey}`;
+    
+                try {
+                    const responseCurrent = await fetch(apiUrlCurrent);
+                    const dataCurrent = await responseCurrent.json();
+                    renderCurrentWeather(dataCurrent);
+                } catch (error) {
+                    console.error('Error fetching current weather data:', error);
+                    alert('Error fetching current weather data. Please try again.');
+                }
+    
+                try {
+                    const responseForecast = await fetch(apiUrlForecast);
+                    const dataForecast = await responseForecast.json();
+                    renderForecastData(dataForecast.list);
+                } catch (error) {
+                    console.error('Error fetching forecast data:', error);
+                    alert('Error fetching forecast data. Please try again.');
+                }
+            }
+    
+            function renderCurrentWeather(weatherData) {
+                const tempSection = document.getElementById('temperatureInfo');
+                const conditionSection = document.getElementById('conditionSummary');
+                const weatherIconDisplay = document.getElementById('forecastIcon');
+                const forecastSection = document.getElementById('detailedForecast');
+    
+                // Clear previous content
+                tempSection.innerHTML = '';
+                conditionSection.innerHTML = '';
+                forecastSection.innerHTML = '';
+    
+                if (weatherData.cod === '404') {
+                    conditionSection.innerHTML = `<p>${weatherData.message}</p>`;
+                } else {
+                    const locationName = weatherData.name;
+                    const tempCelsius = Math.round(weatherData.main.temp - 273.15); // Convert to Celsius
+                    const weatherDescription = weatherData.weather[0].description;
+                    const weatherIconCode = weatherData.weather[0].icon;
+                    const iconUrl = `https://openweathermap.org/img/wn/${weatherIconCode}@4x.png`;
+    
+                    tempSection.innerHTML = `<p>${tempCelsius}°C</p>`;
+                    conditionSection.innerHTML = `<p>${locationName}</p><p>${weatherDescription}</p>`;
+                    weatherIconDisplay.src = iconUrl;
+                    weatherIconDisplay.alt = weatherDescription;
+    
+                    displayWeatherIcon();
+                }
+            }
+    
+            function renderForecastData(forecastData) {
+                const forecastPanel = document.getElementById('detailedForecast');
+                const upcomingHours = forecastData.slice(0, 8); // Display the next 24 hours (3-hour intervals)
+    
+                upcomingHours.forEach(item => {
+                    const forecastTime = new Date(item.dt * 1000); // Convert timestamp to milliseconds
+                    const forecastHour = forecastTime.getHours();
+                    const forecastTemp = Math.round(item.main.temp - 273.15); // Convert to Celsius
+                    const iconCode = item.weather[0].icon;
+                    const iconImageUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+    
+                    const forecastHTML = `
+                        <div class="forecast-item">
+                            <span>${forecastHour}:00</span>
+                            <img src="${iconImageUrl}" alt="Weather Icon">
+                            <span>${forecastTemp}°C</span>
+                        </div>
+                    `;
+    
+                    forecastPanel.innerHTML += forecastHTML;
+                });
+            }
+    
+            function displayWeatherIcon() {
+                const iconElement = document.getElementById('forecastIcon');
+                iconElement.style.display = 'block'; // Show the image
+            }
+        </script>
+    </section>
+    
+        
 </body>
 
 </html>
