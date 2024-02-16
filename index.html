@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vijay Kumar Vemana's Professional Portfolio">
     <title>Vijay Kumar Vemana - Professional Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-    crossorigin="anonymous">
+    <!-- Linking Boot Strap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-     crossorigin="anonymous"></script>
-
-     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-     <!-- Babel for JSX parsing -->
-     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Babel for JSX parsing -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-        <!-- Google tag (gtag.js) -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ5E8FJVKZ"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ5E8FJVKZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            gtag('config', 'G-HZ5E8FJVKZ');
-            </script>
+        gtag('config', 'G-HZ5E8FJVKZ');
+    </script>
     <style>
-        body
-        {
+        body {
             background-color: #e5f0f2;
         }
+
         .card {
             border: none;
             box-shadow: 0 2px 4px rgba(0, 0, 1, 0.4);
             background-color: #d0e4e8
         }
+
         .card-title {
-            color: #007bff; 
+            color: #007bff;
         }
+
         .card-text {
-            color: #6c757d; 
+            color: #6c757d;
         }
-        
+
         .progress-container {
             display: flex;
-            justify-content: space-around; 
-            width: 100%; 
+            justify-content: space-around;
+            width: 100%;
         }
-       
     </style>
+    <!-- Poper JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div>
-
-        
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Vemana</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -94,377 +93,366 @@
                 <div class="col-12 col-md-4">
                     <img src="images/dispaly_pic.jpeg" alt="Headshot" class="img-fluid rounded-circle">
                 </div>
-                <div class="col-12 col-md-7"> 
+                <div class="col-12 col-md-7">
                     <h1>Vijay Kumar Vemana</h1>
                     <p><a href="mailto:youremail@example.com">vemanava@mail.uc.edu</a></p>
                     <p><strong>(513) 413-8621</strong></p>
                     <p><a href="https://www.linkedin.com/in/vijaykumarvemana/">LinkedIn</a></p>
                     <p><a href="https://github.com/vemanava77">GitHub</a></p>
-                    <p><a href="files/Resume.pdf" class="btn btn-primary" download="VijayKumarVemana_Resume.pdf">Download Resume</a></p>
-        </div>
+                    <p><a href="files/Resume.pdf" class="btn btn-primary"
+                            download="VijayKumarVemana_Resume.pdf">Download Resume</a></p>
                 </div>
             </div>
-        </header>
+    </div>
+    </header>
 
-        <div class="container py-3">
-            <div id="last-visit" class="alert" role="alert">
-                
-            </div>
+    <div class="container py-3">
+        <div id="last-visit" class="alert" role="alert">
         </div>
-        <script>
-            // Function to set a cookie
-            function setCookie(cname, cvalue, exdays) {
-              const d = new Date();
-              d.setTime(d.getTime() + (exdays*24*60*60*1000));
-              let expires = "expires="+ d.toUTCString();
-              document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            }
-            
-            // Function to get a cookie
-            function getCookie(cname) {
-              let name = cname + "=";
-              let decodedCookie = decodeURIComponent(document.cookie);
-              let ca = decodedCookie.split(';');
-              for(let i = 0; i < ca.length; i++) {
+    </div>
+    <script>
+        // Function to set a cookie
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays  * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
                 let c = ca[i];
                 while (c.charAt(0) === ' ') {
-                  c = c.substring(1);
+                    c = c.substring(1);
                 }
                 if (c.indexOf(name) === 0) {
-                  return c.substring(name.length, c.length);
+                    return c.substring(name.length, c.length);
                 }
-              }
-              return "";
             }
-            
-            function checkCookie() {
-                let lastVisit = getCookie("lastvisit");
-                let message = document.getElementById('last-visit');
-                if (lastVisit !== "") {
-                    message.className += " alert-info"; 
-                    message.innerHTML = `Welcome back! Your last visit was on ${lastVisit}.`;
-                    console.log("welcome back")
-                } else {
-                    message.className += " alert-success"; 
-                    message.innerHTML = "Welcome to my homepage!";
-                    console.log("hi")
-                }
-                setCookie("lastvisit", new Date().toLocaleString(), 365);
+            return "";
+        }
+
+        function checkCookie() {
+            let lastVisit = getCookie("lastvisit");
+            let message = document.getElementById('last-visit');
+            if (lastVisit !== "") {
+                message.className += " alert-info";
+                message.innerHTML = `Welcome back! Your last visit was on ${lastVisit}.`;
+                console.log("welcome back")
+            } else {
+                message.className += " alert-success";
+                message.innerHTML = "Welcome to my homepage!";
+                console.log("hi")
             }
-           
-            window.onload = checkCookie;
-            </script>
+            setCookie("lastvisit", new Date().toLocaleString(), 365);
+        }
 
-        <section class="container py-5" id="about">
-            <h3 >About Me</h3>
-            <div class="card">
-                <div class="card-body">
-                    
-                    <p class="card-text">As an enthusiastic web developer, passionate about building user-friendly websites and
-                         applications. Skilled in HTML, CSS, JavaScript, and its frameworks like react and always interested in
-                         continuously learning new technologies.</p>
-                </div>
-            </div>
-        </section>
-        <section class="container py-5" id="Education">
-            <div class="row">
-                <div class="col-md">
-                    <h3>Education</h3>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h4 class="card-title"> Masters of Science in Information Technology - University of Cincinnati</h4>
-                            <p class="card-text">2023-2025</p>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title"> Bachelors in Electrical and Electronics Engineering - VRSEC</h4>
-                            <p class="card-text">2017-2021</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="container py-5" id="Experience">
-            <div class="row">
-                <div class="col-md">
-                    <h3>Experience</h3>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h4 class="card-title">Assitant System Engineer - TATA Consultnacy Services</h4>
-                            <p class="card-text">2021 - 2023</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container py-5" id="projects">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2><a href="projects.html" target="_blank">Course Work and Projects </a></h2>
-
-                    
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md">
-                        <h3>Skills</h3>
-                        </div>
-                        <div class="container">
-    
-                            <div class="row">
-                              
-                              <div class="col-md-6">
-                                <h3>Frontend</h3>
-                                <div class="progress mb-3">
-                                  <div class="progress-bar" role="progressbar" style="width: 90%;"
-                                   aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
-                                </div>
-                                <div class="progress mb-3">
-                                  <div class="progress-bar" role="progressbar" style="width: 85%;" 
-                                  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
-                                </div>
-                                <div class="progress mb-3">
-                                  <div class="progress-bar" role="progressbar" style="width: 75%;" 
-                                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">JavaScript</div>
-                                </div>
-                                
-                              </div>
-                          
-                              
-                              <div class="col-md-6">
-                                <h3>Backend</h3>
-                                <div class="progress mb-3">
-                                  <div class="progress-bar" role="progressbar" style="width: 85%;" 
-                                  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Python</div>
-                                </div>
-                                
-                                <div class="progress mb-3">
-                                  <div class="progress-bar" role="progressbar" style="width: 70%;"
-                                   aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Node.js</div>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
-
-                    </div>
-
-                </div>
-            </div> 
-        </section>
         
-          
+    </script>
 
-        <footer class="container py-5" id="contact">
-            <h2>Contact Me</h2>
+    <section class="container py-5" id="about">
+        <h3>About Me</h3>
+        <div class="card">
+            <div class="card-body">
 
-            <form>
-                <div class="form-group">
-                    <label for="nameInput">Name</label>
-                    <input type="text" class="form-control" id="nameInput" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="emailInput">Email address</label>
-                    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="messageTextarea">Message</label>
-                    <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-        </footer>
-        <div class="container mt-5">
-            <h2 class="mb-4">Current Weather in <span id="city-name"></span></h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title" id="weather-description"></h5>
-                    <p class="card-text">Temperature: <span id="temp"></span>°C</p>
-                    <p class="card-text">Apparent Temperature: <span id="app-temp"></span>°C</p>
-                    <p class="card-text">Humidity: <span id="humidity"></span>%</p>
-                    <p class="card-text">Wind Speed: <span id="wind-spd"></span> km/h <span id="wind-cdir-full"></span></p>
-                    <p class="card-text">Air Quality Index: <span id="aqi"></span></p>
-                    <p class="card-text">Sunrise: <span id="sunrise"></span> AM, Sunset: <span id="sunset"></span> PM</p>
+                <p class="card-text">As an enthusiastic web developer, passionate about building user-friendly websites
+                    and
+                    applications. Skilled in HTML, CSS, JavaScript, and its frameworks like react and always interested
+                    in
+                    continuously learning new technologies.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container py-5" id="Education">
+                <h3>Education</h3>
+                <div class="card    ">
+                    <div class="card-body">
+                        <h4 class="card-title"> Masters of Science in Information Technology - University of Cincinnati
+                        </h4>
+                        <p class="card-text">2023-2025</p>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"> Bachelors in Electrical and Electronics Engineering - VRSEC</h4>
+                        <p class="card-text">2017-2021</p>
+                    </div>
+        </div>
+    </section>
+    <section class="container py-5" id="Experience">
+        <div class="row">
+            <div class="col-md">
+                <h3>Experience</h3>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h4 class="card-title">Assitant System Engineer - TATA Consultnacy Services</h4>
+                        <p class="card-text">2021 - 2023</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <script>
-            const apiKey = '0b7d28cd024d45929b4bd50e995a806e'; 
-            
-            function fetchWeatherData(lat, lon) {
+    </section>
+    <section class="container py-5" id="projects">
+        <div class="row">
+            <div class="col-md-6">
+                <h2><a href="projects.html" target="_blank">Course Work and Projects </a></h2>
+
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h3>Skills</h3>
+                </div>
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <h3>Frontend</h3>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100">HTML</div>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                    aria-valuemin="0" aria-valuemax="100">CSS</div>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100">JavaScript</div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <h3>Backend</h3>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                    aria-valuemin="0" aria-valuemax="100">Python</div>
+                            </div>
+
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                                    aria-valuemin="0" aria-valuemax="100">Node.js</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+
+    <footer class="container py-5" id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Email address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="messageTextarea">Message</label>
+                <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </footer>
+    <div class="container mt-5">
+        <h2 class="mb-4">Current Weather in <span id="city-name"></span></h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" id="weather-description"></h5>
+                <p class="card-text">Temperature: <span id="temp"></span>°C</p>
+                <p class="card-text">Apparent Temperature: <span id="app-temp"></span>°C</p>
+                <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                <p class="card-text">Wind Speed: <span id="wind-spd"></span> km/h <span id="wind-cdir-full"></span></p>
+                <p class="card-text">Air Quality Index: <span id="aqi"></span></p>
+                <p class="card-text">Sunrise: <span id="sunrise"></span> AM, Sunset: <span id="sunset"></span> PM</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const apiKey = '0b7d28cd024d45929b4bd50e995a806e';
+
+        async function fetchWeatherData(lat, lon) {
+            try {
                 const url = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&include=minutely`;
-            
-                fetch(url)
-                    .then(response => response.json())
-                    .then(data => {
-                        const weather = data.data[0];
-                        document.getElementById('city-name').textContent = weather.city_name;
-                        document.getElementById('weather-description').textContent = weather.weather.description;
-                        document.getElementById('temp').textContent = weather.temp;
-                        document.getElementById('app-temp').textContent = weather.app_temp;
-                        document.getElementById('humidity').textContent = weather.rh;
-                        document.getElementById('wind-spd').textContent = weather.wind_spd;
-                        document.getElementById('wind-cdir-full').textContent = `(${weather.wind_cdir_full})`;
-                        document.getElementById('aqi').textContent = weather.aqi;
-                        document.getElementById('sunrise').textContent = weather.sunrise;
-                        document.getElementById('sunset').textContent = weather.sunset;
-                    })
-                    .catch(error => console.error('Error fetching weather data:', error));
+                const response = await fetch(url);
+                const data = await response.json();
+                const weather = data.data[0];
+                document.getElementById('city-name').textContent = weather.city_name;
+                document.getElementById('weather-description').textContent = weather.weather.description;
+                document.getElementById('temp').textContent = weather.temp;
+                document.getElementById('app-temp').textContent = weather.app_temp;
+                document.getElementById('humidity').textContent = weather.rh;
+                document.getElementById('wind-spd').textContent = weather.wind_spd;
+                document.getElementById('wind-cdir-full').textContent = `(${weather.wind_cdir_full})`;
+                document.getElementById('aqi').textContent = weather.aqi;
+                document.getElementById('sunrise').textContent = weather.sunrise;
+                document.getElementById('sunset').textContent = weather.sunset;
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
             }
-            
-            function getLocationAndWeather() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(position => {
-                        const lat = position.coords.latitude;
-                        const lon = position.coords.longitude;
-                        console.log(lat,lon)
-                        fetchWeatherData(lat, lon);
-                    }, () => {
-                        console.error('Geolocation is supported, but the user denied the request.');
-                        
-                    });
-                } else {
-                    console.error('Geolocation is not supported by this browser.');
-                   
-                }
+        }
+
+        function getLocationAndWeather() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(async (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    console.log(lat, lon);
+                    await fetchWeatherData(lat, lon);
+                }, () => {
+                    console.error('Geolocation is supported, but the user denied the request.');
+                });
+            } else {
+                console.error('Geolocation is not supported by this browser.');
             }
-            
-           
-            getLocationAndWeather();
-            
-            
+        }
+
+        getLocationAndWeather();
+
+
+
     </script>
     <script>
-        function fetchJoke() {
-        
-            fetch('https://v2.jokeapi.dev/joke/Any')
-                .then(response => response.json())
-                .then(data => {
-                    if(data.error) {
-                        document.getElementById('jokeSetup').innerText = 'Error fetching joke';
-                        document.getElementById('jokeDelivery').innerText = '';
-                        return;
-                    }
-                    
-                   
-                    document.getElementById('jokeSetup').innerText = data.setup || '';
-                    
-                    if(data.delivery) {
-                        document.getElementById('jokeDelivery').innerText = data.delivery;
-                    } else {
-                        document.getElementById('jokeDelivery').innerText = '';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching joke:', error);
-                    document.getElementById('jokeSetup').innerText = 'Failed to load joke';
+        async function fetchJoke() {
+            try {
+                const response = await fetch('https://v2.jokeapi.dev/joke/Any');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                if (data.error) {
+                    document.getElementById('jokeSetup').innerText = 'Error fetching joke';
                     document.getElementById('jokeDelivery').innerText = '';
-                });
-            }
-        
-        setInterval(fetchJoke, 60000);
-        
-        
+                    return;
+                }
 
-      
-        </script>
+                document.getElementById('jokeSetup').innerText = data.setup || '';
+
+                if (data.delivery) {
+                    document.getElementById('jokeDelivery').innerText = data.delivery;
+                } else {
+                    document.getElementById('jokeDelivery').innerText = '';
+                }
+            } catch (error) {
+                console.error('Error fetching joke:', error);
+                document.getElementById('jokeSetup').innerText = 'Failed to load joke';
+                document.getElementById('jokeDelivery').innerText = '';
+            }
+        }
+
+        setInterval(fetchJoke, 60000);
+
+        // Initial call to load a joke when the page loads
+        fetchJoke();
+    </script>
     <section class="container py-5" id="jokes">
-            <h3>Funny Moment</h3>
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-text" id="jokeSetup">Loading joke...</p>
-                    <p class="card-text" id="jokeDelivery"></p>
-                </div>
+        <h3>Funny Moment</h3>
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text" id="jokeSetup">Loading joke...</p>
+                <p class="card-text" id="jokeDelivery"></p>
             </div>
+        </div>
     </section>
     <script>
 
-        window.onload = function() {
+        window.onload = function () {
             checkCookie();
             fetchJoke();
-  
+
         };
     </script>
-        <div id="email"></div>
-        <script type="text/babel">
-            function EmailToggle() {
-              const [shown, setShown] = React.useState(false);
-            
-              function toggleEmail() {
+    <div id="email"></div>
+    <script type="text/babel">
+        function EmailToggle() {
+            const [shown, setShown] = React.useState(false);
+
+            function toggleEmail() {
                 setShown(!shown);
-              }
-            
-              return (
-                <div className="container mt-3">
-                  <button onClick={toggleEmail} className="btn btn-primary">
-                    {shown ? 'Hide my email' : 'Show my email'}
-                  </button>
-                  {shown && <p className="mt-2"><a href="mailto:vemanava@mail.uc.edu" className="link-primary">vemanava@mail.uc.edu</a></p>}
-                </div>
-              );
             }
-            
-            ReactDOM.render(<EmailToggle />, document.getElementById('email'));
-            </script>
 
-            <div class="container my-5">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Analog Clock</h5>
-                        <canvas id="analog-clock" width="150" height="150" style="background-color:#999;"></canvas>
-                    </div>
+            return (
+                <div className="container mt-3">
+                    <button onClick={toggleEmail} className="btn btn-primary">
+                        {shown ? 'Hide my email' : 'Show my email'}
+                    </button>
+                    {shown && <p className="mt-2"><a href="mailto:vemanava@mail.uc.edu" className="link-primary">vemanava@mail.uc.edu</a></p>}
                 </div>
-                <div id="digital-clock" class="text-center mt-3"></div>
-            </div>
-            <script src="https://waph-uc.github.io/clock.js"></script>
-            <script>
-                $(document).ready(function() {
-                var canvas = $('#analog-clock')[0];
-                var ctx = canvas.getContext("2d");
-                var radius = canvas.height / 2;
-                ctx.translate(radius, radius);
-                radius *= 0.90;
-                setInterval(drawClock, 1000);
+            );
+        }
 
-                function drawClock() {
+        ReactDOM.render(<EmailToggle />, document.getElementById('email'));
+    </script>
+
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Analog Clock</h5>
+                <canvas id="analog-clock" width="150" height="150" style="background-color:#999;"></canvas>
+            </div>
+        </div>
+        <div id="digital-clock" class="text-center mt-3"></div>
+    </div>
+    <script src="https://waph-uc.github.io/clock.js"></script>
+    <script>
+        $(document).ready(function () {
+            var canvas = $('#analog-clock')[0];
+            var ctx = canvas.getContext("2d");
+            var radius = canvas.height / 2;
+            ctx.translate(radius, radius);
+            radius *= 0.90;
+            setInterval(drawClock, 1000);
+
+            function drawClock() {
                 drawFace(ctx, radius);
                 drawNumbers(ctx, radius);
                 drawTime(ctx, radius);
-                }
+            }
 
-                function displayTime() {
+            function displayTime() {
                 $('#digital-clock').text("Current time: " + new Date().toLocaleTimeString());
-                }
-                setInterval(displayTime, 500);
-            });
-              </script>
+            }
+            setInterval(displayTime, 500);
+        });
+    </script>
 
-            <div id="time"></div>
+    <div id="time"></div>
 
-            <script type="text/babel">
-                // React component
-                function DateTimeDisplay() {
-                    const [date, setDate] = React.useState('');
-                    return (
-                        <div id="date-time" className="text-center mt-5">
-                            <div id="date" className="btn btn-primary" onClick={() => setDate(new Date().toString())}>
-                                {date || "Click here to show date"}
-                            </div>
-                        </div>
-                    );
-                }
-                ReactDOM.render(<DateTimeDisplay />, document.getElementById('time'));
-            </script>
-
-        
-
-   
-
-  
-    </div>
+    <script type="text/babel">
+        // React component
+        function DateTimeDisplay() {
+            const [date, setDate] = React.useState('');
+            return (
+                <div id="date-time" className="text-center mt-5">
+                    <div id="date" className="btn btn-primary" onClick={() => setDate(new Date().toString())}>
+                        {date || "Click here to show date"}
+                    </div>
+                </div>
+            );
+        }
+        ReactDOM.render(<DateTimeDisplay />, document.getElementById('time'));
+    </script>
 </body>
+
 </html>
