@@ -17,6 +17,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <!-- Babel for JSX parsing -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -56,22 +57,22 @@
         #forecast-container .forecast-output img {
                 margin: 0 auto; /* Centers the weather icon */
             }
-            #detailedForecast .hourly-item {
+
+        #detailedForecast .forecast-item {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 10px;
             }
 
-            #hdetailedForecast .hourly-item span {
+        #detailedForecast .forecast-item span {
                 margin-top: 5px;
             }
 
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-                #hourly-forecast {
-                    flex-direction: column;
-                    align-items: center;
+        @media (max-width: 768px) {
+        #detailedForecast .forecast-item {
+                flex-direction: column;
+                align-items: center;
                 }
             }
 
@@ -127,8 +128,7 @@
                     <p><a href="files/Resume.pdf" class="btn btn-primary"
                             download="VijayKumarVemana_Resume.pdf">Download Resume</a></p>
                 </div>
-            </div>
-    </div>
+            </div> 
         </section>
     <!-- cookie Msg  -->
     <section>   
@@ -178,7 +178,6 @@
             setCookie("lastvisit", new Date().toLocaleString(), 365);
         }
     </script>
-
     </section>
     <!-- About Section -->
     <section class="container py-5" id="about">
