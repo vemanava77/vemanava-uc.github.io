@@ -88,7 +88,8 @@ the below code help to acheive details section
                     <h1>Vijay Kumar Vemana</h1>
                     <p><a href="mailto:youremail@example.com">vemanava@mail.uc.edu</a></p>
                     <p><strong>(513) 413-8621</strong></p>
-                    <p><a href="https://www.linkedin.com/in/vijaykumarvemana/">LinkedIn</a></p>
+                    <p><a href="https://www.linkedin.com/in/vijaykumarvemana/">
+                    LinkedIn</a></p>
                     <p><a href="https://github.com/vemanava77">GitHub</a></p>
                     <p><a href="files/Resume.pdf" class="btn btn-primary"
                             download="VijayKumarVemana_Resume.pdf">Download Resume</a></p>
@@ -247,15 +248,18 @@ We can achieve this with the below code
                         <div class="col-md-6">
                             <h3>Frontend</h3>
                             <div class="progress mb-3">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                                <div class="progress-bar" role="progressbar" 
+                                style="width: 90%;" aria-valuenow="90"
                                     aria-valuemin="0" aria-valuemax="100">HTML</div>
                             </div>
                             <div class="progress mb-3">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                <div class="progress-bar" role="progressbar" 
+                                style="width: 85%;" aria-valuenow="85"
                                     aria-valuemin="0" aria-valuemax="100">CSS</div>
                             </div>
                             <div class="progress mb-3">
-                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                <div class="progress-bar" role="progressbar" 
+                                style="width: 75%;" aria-valuenow="75"
                                     aria-valuemin="0" aria-valuemax="100">JavaScript</div>
                             </div>
                         </div>
@@ -264,12 +268,14 @@ We can achieve this with the below code
                         <div class="col-md-6">
                             <h3>Backend</h3>
                             <div class="progress mb-3">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                <div class="progress-bar" role="progressbar"
+                                 style="width: 85%;" aria-valuenow="85"
                                     aria-valuemin="0" aria-valuemax="100">Python</div>
                             </div>
 
                             <div class="progress mb-3">
-                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                                <div class="progress-bar" role="progressbar" 
+                                style="width: 70%;" aria-valuenow="70"
                                     aria-valuemin="0" aria-valuemax="100">Node.js</div>
                             </div>
 
@@ -287,15 +293,18 @@ We can achieve this with the below code
         <form>
             <div class="form-group">
                 <label for="nameInput">Name</label>
-                <input type="text" class="form-control" id="nameInput" placeholder="Your Name">
+                <input type="text" class="form-control"
+                 id="nameInput" placeholder="Your Name">
             </div>
             <div class="form-group">
                 <label for="emailInput">Email address</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                <input type="email" class="form-control" 
+                id="emailInput" placeholder="name@example.com">
             </div>
             <div class="form-group">
                 <label for="messageTextarea">Message</label>
-                <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
+                <textarea class="form-control" 
+                id="messageTextarea" rows="3"></textarea>
             </div>
             <br>
             <button type="submit" class="btn btn-primary">Send</button>
@@ -318,10 +327,13 @@ The course overview page and its styling can be achived using the above
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Application Programming and Hacking Course</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+     rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
     crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
      crossorigin="anonymous"></script>
     <style>
@@ -352,69 +364,121 @@ The course overview page and its styling can be achived using the above
     
     <div class="container my-5 p-3">
         
-        <p>In this course, students will study basic web application development with front-end
-
-            (HTML5, JavaScript, CSS) and back-end (PHP/MySQL). Web application vulnerabilities and 
-
-            attacks will be introduced and explored with hands-on exercises on the range. Secure programming principles and
-            
-            practices will be introduced to avoid potential web application vulnerabilities and attacks</p>
+        <p>In this course, students will study basic web
+         application development with front-end
+            (HTML5, JavaScript, CSS) and back-end (PHP/MySQL).
+             Web application vulnerabilities and 
+            attacks will be introduced and explored 
+            with hands-on exercises on the range. 
+            Secure programming principles and
+            practices will be introduced to avoid potential 
+            web application vulnerabilities and attacks</p>
     </div>
 
 
     <h3 class="mx-3">Hands-on Projects</h3>
-    <div class="accordion accordion-flush my-5 p-4" id="accordionFlushExample">
+    <div class="accordion accordion-flush \
+    my-5 p-4" id="accordionFlushExample">
         
         <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingProjects">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProject1" aria-expanded="false" aria-controls="flush-collapseProjects">
+            <h2 class="accordion-header" 
+            id="flush-headingProjects">
+                <button class="accordion-button collapsed"
+                 type="button" data-bs-toggle="collapse" 
+                 data-bs-target="#flush-collapseProject1" 
+                 aria-expanded="false" 
+                 aria-controls="flush-collapseProjects">
                     Lab -1
                 </button>
             </h2>
-            <div id="flush-collapseProject1" class="accordion-collapse collapse" aria-labelledby="flush-headingProjects" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseProject1" class="accordion-collapse
+            collapse" aria-labelledby="flush-headingProjects" 
+            data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                     <p><strong>Lab 1: Foundations of the Web</strong></p>
-                    <p>In this lab we have done mainly two things. Firstly we got more deeper into HTTP protocol . 
-                        Wireshark tool was used to analyse the request and response .And aslo requests were sent
-                         from differnet places like from browser and terminal (using telnet) and observed the diffrences . 
-                         In second part we have built very basic CGI (Common Gateway Interface ) ,we used C programming language to
-                          built the CGIs and then we buitl basic OHP pages and then moved on to build web servers using PHP wheer we also sent data 
-                        along with requests and observed how the web servers handled the data in wireshark. Can be found here <a href="https://github.com/vemanava77/waph-vemanava/tree/main/labs/lab1">here</a></p>
+                    <p>In this lab we have done mainly two things. 
+                    Firstly we got more deeper into HTTP protocol . 
+                        Wireshark tool was used to analyse the request 
+                        and response .And aslo requests were sent
+                         from differnet places like from browser and 
+                         terminal (using telnet) and observed the diffrences . 
+                         In second part we have built very 
+                         basic CGI (Common Gateway Interface ) ,
+                         we used C programming language to
+                          built the CGIs and then we buitl basic
+                           OHP pages and then moved on to build 
+                           web servers using PHP wheer we also sent data 
+                        along with requests and observed how the web servers
+                         handled the data in wireshark.
+                          Can be found here 
+                          <a href="https://github.com/vemanava77/waph-vemanava/tree/main/labs/lab1">here</a></p>
                 </div>
             </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingProjects">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProject2" aria-expanded="false" aria-controls="flush-collapseProjects">
+          <h2 class="accordion-header" 
+          id="flush-headingProjects">
+              <button class="accordion-button collapsed"
+               type="button" data-bs-toggle="collapse" 
+               data-bs-target="#flush-collapseProject2"
+                aria-expanded="false"
+                aria-controls="flush-collapseProjects">
                   Lab -2
               </button>
           </h2>
-          <div id="flush-collapseProject2" class="accordion-collapse collapse" aria-labelledby="flush-headingProjects" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapseProject2" 
+          class="accordion-collapse
+           collapse" aria-labelledby="flush-headingProjects" 
+           data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                   <p><strong> Lab 2:Front-end Web Development</strong></p>
-                  <p>In this lab we build our first HTML page and then add styles to our page using CSS using inline , 
-                    internal, external methods and then we add javascript to our code using inline , internal and external ways .
+                  <p>In this lab we build our first HTML page 
+                  and then add styles to our page using CSS using inline , 
+                    internal, external methods and
+                    then we add javascript to our code using inline ,
+                     internal and external ways .
                     And then we move onto sending
-                     requests using AJAX and integrating Web API using and then fetch API to render the response of those API.Can be found here <a href="https://github.com/vemanava77/waph-vemanava/tree/main/labs/lab2">here</a></p>
+                     requests using AJAX and integrating Web API 
+                     using and then fetch API to render the response of 
+                     those API.
+                     Can be found here
+                    <a href="https://github.com/vemanava77/waph-vemanava/tree/main/labs/lab2">here</a></p>
               </div>
           </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingProjects">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProject3" aria-expanded="false" aria-controls="flush-collapseProjects">
+            <button class="accordion-button collapsed" 
+            type="button" data-bs-toggle="collapse" 
+            data-bs-target="#flush-collapseProject3" 
+            aria-expanded="false" aria-controls="flush-collapseProjects">
                 Hackathon 1 - Cross-site Scripting Attacks and Defenses
             </button>
         </h2>
-        <div id="flush-collapseProject3" class="accordion-collapse collapse" aria-labelledby="flush-headingProjects" data-bs-parent="#accordionFlushExample">
+        <div id="flush-collapseProject3" 
+        class="accordion-collapse collapse" aria-labelledby="flush-headingProjects" 
+        data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-                <p><strong>Hackathon 1 - Cross-site Scripting Attacks and Defenses</strong></p>
-                <p>In this hackathon we got to do cross scripting attacks on multiple levels and we tried to exploit the server code and we tried to guess what might be the vulnerabilities that are enabling us to do the attacks . In the next task we tried to implement defences for the front end development prototype we built in lab2 and server code we used in lab2 .
-
-                    This hackathon has two tasks with multiple sub-tasks with grade distribution all the files related to it are present
+                <p><strong>Hackathon 1 - Cross-site Scripting
+                 Attacks and Defenses</strong></p>
+                <p>In this hackathon we got to do cross
+                 scripting attacks on multiple levels and
+                we tried to exploit the server code and we tried to guess
+                 what might be the vulnerabilities
+                  that are enabling us to do the attacks . 
+                 In the next task we tried to implement defences
+                  for the front end development 
+                 prototype we built in lab2 and server 
+                 code we used in lab2 .
+                    This hackathon has two tasks with 
+                    multiple sub-tasks with 
+                    grade distribution all the 
+                    files related to it are present
                     
                     <a href="https://github.com/vemanava77/waph-vemanava/tree/main/labs/lab3">here</a>
                     
-                    and we have made code revison to the front end prototype which have done in previous lab which can be found 
+                    and we have made code revison to the 
+                    front end prototype which have done in previous lab which can be found 
                     
                     <a href="https://github.com/vemanava77/waph-vemanava/tree/main/labs/lab2">here</p>
             </div>
@@ -435,25 +499,25 @@ Now we need to integrate Joke API inorder to do that in Jquery we need to includ
 we can achive the above by using the below code 
 
 ```
- <section class="container py-5" id="jokes">
-        <h3>Funny Moment</h3>
-        <div class="card">
-            <div class="card-body">
-                <p class="card-text" id="jokeSetup">Loading joke...</p>
-                <p class="card-text" id="jokeDelivery"></p>
-            </div>
+<section class="container py-5" id="jokes">
+    <h3>Funny Moment</h3>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text" id="jokeSetup">Loading joke...</p>
+            <p class="card-text" id="jokeDelivery"></p>
         </div>
-        <script>
-            async function fetchJoke() {
-                try {
-                    const response = await fetch('https://v2.jokeapi.dev/joke/Any');
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const data = await response.json();
-                    if (data.error) {
-                        document.getElementById('jokeSetup').innerText = 'Error fetching joke';
-                        document.getElementById('jokeDelivery').innerText = '';
+    </div>
+    <script>
+        async function fetchJoke() {
+        try {
+             const response = await fetch('https://v2.jokeapi.dev/joke/Any');
+            if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                 const data = await response.json();
+                if (data.error) {
+                     document.getElementById('jokeSetup').innerText = 'Error fetching joke';
+                     document.getElementById('jokeDelivery').innerText = '';
                         return;
                     }
                     document.getElementById('jokeSetup').innerText = data.setup || '';
@@ -493,10 +557,12 @@ Asd aslo you can see e button to toogle the email we use react to do that in ord
                 return (
 
                     <div className="container mt-3">
-                        <button onClick={toggleEmail} className="btn btn-primary">
+                        <button onClick={toggleEmail} 
+                        className="btn btn-primary">
                             {shown ? 'Hide my email' : 'Show my email'}
                         </button>
-                        {shown && <p className="mt-2"><a href="mailto:vemanava@mail.uc.edu" 
+                        {shown && <p className="mt-2">
+                        <a href="mailto:vemanava@mail.uc.edu" 
                             className="link-primary">vemanava@mail.uc.edu</a></p>}
                     </div>
                 );
@@ -507,8 +573,10 @@ Asd aslo you can see e button to toogle the email we use react to do that in ord
 And we aslo need to babel to parse the JSX 
 
 ```
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"
+     crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" 
+    crossorigin></script>
     <!-- Babel for JSX parsing -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <!-- jquery  -->
@@ -552,7 +620,9 @@ Which can be acived using the below code
                 }
     
                 function displayTime() {
-                    $('#digital-clock').text("Current time: " + new Date().toLocaleTimeString());
+                    $('#digital-clock').
+                    text("Current time: " + 
+                    new Date().toLocaleTimeString());
                 }
                 setInterval(displayTime, 500);
             });
@@ -599,17 +669,21 @@ First we need to create weather API account and then we can get a API key and we
                 <div class="card-body text-center">
                     <h2 class="card-title">Weather Dashboard</h2>
                     <div class="input-group mb-3">
-                        <input type="text" id="cityInput" class="form-control" 
-                        placeholder="Enter city" aria-label="City name" aria-describedby="searchButton">
+                        <input type="text" id="cityInput" 
+                        class="form-control" 
+                        placeholder="Enter city" aria-label="City 
+                        name" aria-describedby="searchButton">
                         <button class="btn btn-outline-primary" type="button" 
                         id="searchButton" onclick="fetchWeatherData()">Search</button>
                     </div>
                     <div class="forecast-output mt-4">
-                        <img id="forecastIcon" class="img-fluid mb-2" style="width: 200px; height: auto;">
+                        <img id="forecastIcon" class="img-fluid mb-2" 
+                        style="width: 200px; height: auto;">
                         <div id="temperatureInfo" class="h3"></div>
                         <div id="conditionSummary" class="h5"></div>
                         <div id="detailedForecast" 
-                        class="d-flex flex-row justify-content-between flex-wrap"></div>
+                        class="d-flex flex-row justify-content-between
+                         flex-wrap"></div>
                     </div>
                 </div>
             </div>
@@ -624,8 +698,10 @@ First we need to create weather API account and then we can get a API key and we
                     return;
                 }
     
-                const apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}`;
-                const apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${weatherApiKey}`;
+                const apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?
+                q=${cityName}&appid=${weatherApiKey}`;
+                const apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?
+                q=${cityName}&appid=${weatherApiKey}`;
     
                 try {
                     const responseCurrent = await fetch(apiUrlCurrent);
